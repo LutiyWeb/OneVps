@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ONE-VPS</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <svg display="none">
+        <symbol viewBox="0 0 20 20" id="userIcon">
+            <path
+                d="M10.0001 20C8.48816 20.0043 6.99532 19.6622 5.6361 19C5.13865 18.758 4.66203 18.4754 4.2111 18.155L4.0741 18.055C2.83392 17.1396 1.81997 15.9522 1.1101 14.584C0.375836 13.1679 -0.00499271 11.5952 4.94229e-05 10C4.94229e-05 4.47715 4.47725 0 10.0001 0C15.5229 0 20.0001 4.47715 20.0001 10C20.0051 11.5944 19.6247 13.1664 18.8911 14.582C18.1822 15.9494 17.1697 17.1364 15.9311 18.052C15.4639 18.394 14.968 18.6951 14.4491 18.952L14.3691 18.992C13.009 19.6577 11.5144 20.0026 10.0001 20ZM10.0001 15C8.50158 14.9971 7.12776 15.834 6.4431 17.167C8.68449 18.2772 11.3157 18.2772 13.5571 17.167V17.162C12.8716 15.8305 11.4977 14.9954 10.0001 15ZM10.0001 13C12.1662 13.0028 14.1635 14.1701 15.2291 16.056L15.2441 16.043L15.2581 16.031L15.2411 16.046L15.2311 16.054C17.7601 13.8691 18.6644 10.3423 17.4987 7.21011C16.3331 4.07788 13.3432 2.00032 10.0011 2.00032C6.65901 2.00032 3.66909 4.07788 2.50345 7.21011C1.33781 10.3423 2.2421 13.8691 4.7711 16.054C5.83736 14.169 7.83446 13.0026 10.0001 13ZM10.0001 12C7.79096 12 6.0001 10.2091 6.0001 8C6.0001 5.79086 7.79096 4 10.0001 4C12.2092 4 14.0001 5.79086 14.0001 8C14.0001 9.06087 13.5787 10.0783 12.8285 10.8284C12.0784 11.5786 11.061 12 10.0001 12ZM10.0001 6C8.89553 6 8.0001 6.89543 8.0001 8C8.0001 9.10457 8.89553 10 10.0001 10C11.1047 10 12.0001 9.10457 12.0001 8C12.0001 6.89543 11.1047 6 10.0001 6Z" />
+        </symbol>
+        <symbol viewBox="0 0 24 12" id="btnArrow">
+            <path
+                d="M19.404 7.20003L16.308 10.308L18 12L24 6.00003L18 3.05176e-05L16.308 1.69203L19.404 4.80003H0V7.20003H19.404Z" />
+        </symbol>
+        <symbol viewBox="0 0 25 22" id="heartIcon">
+            <path
+                d="M9.93335e-08 6.60079C-0.000310542 4.82907 0.727981 3.13163 2.02102 1.89038C3.31405 0.649132 5.06323 -0.0316765 6.875 0.00113322C9.02165 -0.0100129 11.07 0.880079 12.5 2.44545C13.93 0.880079 15.9783 -0.0100129 18.125 0.00113322C19.9368 -0.0316765 21.6859 0.649132 22.979 1.89038C24.272 3.13163 25.0003 4.82907 25 6.60079C25 13.1467 17.0263 18.0891 12.5 22C7.98375 18.0561 9.93335e-08 13.1516 9.93335e-08 6.60079Z" />
+        </symbol>
+    </svg>
+    <div class="page">
+        <main class="about" id="about">
+            <div class="about__container _container">
+                <div class="header flex flex-h-star flex-v-center ">
+                    <a href="./index.html" class="logo header__logo">
+                        ONE-vps
+                    </a>
+                    <ul class="menu header__menu 
+                              flex flex-wrap">
+                        <li class="menu__item">
+                            <a href="./index.html" class="menu__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu__item menu__item--services">
+                            <a href="#" class="menu__link">
+                                Наши услуги
+                            </a>
+                            <ul class="services-list">
+                                <li class="services-item">
+                                    <a href="./virtual-servers.html" class="services-link">
+                                        Виртуальные сервера
+                                    </a>
+                                </li>
+                                <li class="services-item">
+                                    <a href="./dedicated-servers.html" class="services-link">
+                                        Выделенные сервера
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="./about.html" class="menu__link">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                Статус сервисов
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                База знаний
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="user-btn basicBtn">
+                        <svg class="userIcon">
+                            <use xlink:href="#userIcon">
+                            </use>
+                        </svg>
+                        <span>Личный кабинет</span>
+                    </a>
+
+                    <div class="burger">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </div>
+                </div>
+                <div class="about-content flex ">
+                    <div class="about-info">
+                        <div class="title-wrapper about-title__wrapper flex">
+                            <h2 class="about-title title ">
+                                О нас
+                            </h2>
+                            <div class="title-icon">
+                                <img src="./img/smile-icon.png" alt="">
+                            </div>
+                        </div>
+                        <div class="about-info__subtitle">
+                            Каждому клиенту предоставляется качественная техническая поддержка, которую можно получить
+                            24 часа в сутки, 7 дней в
+                            неделю.
+                        </div>
+                        <button class="about-info__btn basicBtn">
+                            <span>Наши контакты</span>
+                            <svg class="btnArrow iconNull">
+                                <use xlink:href="#btnArrow">
+                                </use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="about-offers">
+                        <div class="about-offers__item flex flex-v-center">
+                            <div class="iconInner iconInner--yellow">
+                                <svg class="heartIcon--blue heartIcon">
+                                    <use xlink:href="#heartIcon">
+                                    </use>
+                                </svg>
+                            </div>
+                            <div class="about-offers__title">
+                                Расположение
+                            </div>
+                            <p class="about-offers__text">
+                                Наши сервера расположены в популярных ДЦ по всему миру, что гарантирует хороший пинг
+                                взависимости от страны клиента.
+                            </p>
+                        </div>
+
+                        <div class="about-offers__item flex flex-v-center">
+                            <div class="iconInner iconInner--yellow">
+                                <svg class="heartIcon--blue heartIcon">
+                                    <use xlink:href="#heartIcon">
+                                    </use>
+                                </svg>
+                            </div>
+                            <div class="about-offers__title">
+                                Оплата
+                            </div>
+                            <p class="about-offers__text">
+                                У нас есть множество различных способов оплаты с минимальной комиссией, что делает наши
+                                предложения еще лучше.
+                            </p>
+                        </div>
+
+                        <div class="about-offers__item about-offers__team flex flex-v-center">
+                            <div class="iconInner iconInner--yellow">
+                                <svg class="heartIcon--blue heartIcon">
+                                    <use xlink:href="#heartIcon">
+                                    </use>
+                                </svg>
+                            </div>
+                            <div class="about-offers__title">
+                                Команда
+                            </div>
+                            <p class="about-offers__text">
+                                Мы имеем достаточно большое количество квалифицированных специалистов, которые всегда
+                                готовы помочь.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <section class="why-us">
+            <div class="why-us__container _container">
+                <div class="title-wrapper why-us-title__wrapper flex">
+                    <h2 class="why-us-title title ">
+                        Почему именно мы
+                    </h2>
+                    <div class="title-icon">
+                        <img src="./img/smile-icon.png" alt="">
+                    </div>
+                </div>
+                <div class="why-us__inner flex">
+                    <div class="why-us__column flex">
+                        <div class="why-us__item-box">
+                            <div class="why-us__item">
+                                <div class="why-us__index">
+                                    <span>
+                                        1
+                                    </span>
+                                </div>
+                                <div class="why-us__info">
+                                    <p class="why-us__info-heading">
+                                        Премиальное оборудование
+                                    </p>
+                                    <p class="why-us__info-body">
+                                        Мы используем лучшее оборудование и комплектующие, чтобы гарантировать
+                                        стабильную работу и uptime не менее 99,92%.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-us__item-box">
+                            <div class="why-us__item why-us__item--yellow">
+                                <div class="why-us__index">
+                                    <span>
+                                        2
+                                    </span>
+                                </div>
+                                <div class="why-us__info">
+                                    <p class="why-us__info-heading">
+                                        Круглосуточная
+                                        поддержка
+                                    </p>
+                                    <p class="why-us__info-body">
+                                        Каждому клиенту предоставляется качественная техническая поддержка, которую
+                                        можно получить 24 часа в сутки, 7 дней в
+                                        неделю.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why-us__column">
+                        <div class="why-us__item-box why-us__item-horizontal">
+                            <div class="why-us__item why-us__item--pink flex ">
+                                <div class="why-us__index">
+                                    <span>
+                                        3
+                                    </span>
+                                </div>
+                                <div class="why-us__info">
+                                    <p class="why-us__info-heading">
+                                        Выгодные тарифы
+                                    </p>
+                                    <p class="why-us__info-body">
+                                        Мы ценим ваш выбор и предлагаем лучшие условия сотрудничества - выгодные тарифы
+                                        и бонусы для наших клиентов!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-us__item-box why-us__item-horizontal">
+                            <div class="why-us__item why-us__item--blue flex ">
+                                <div class="why-us__index">
+                                    <span>
+                                        4
+                                    </span>
+                                </div>
+                                <div class="why-us__info">
+                                    <p class="why-us__info-heading">
+                                        Выгодные тарифы
+                                    </p>
+                                    <p class="why-us__info-body">
+                                        Мы ценим ваш выбор и предлагаем лучшие условия сотрудничества - выгодные тарифы
+                                        и бонусы для наших клиентов!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vector-list">
+                <img src="./img/vector_contact/vector1.svg" class="vector-contact__1" alt="">
+                <img src="./img/vector_contact/vecotr2.png" class="vector-contact__2" alt="">
+                <img src="./img/vector_contact/vector3.svg" class="vector-contact__3>" alt="">
+            </div>
+        </section>
+
+        <div class="pop-up__overlay">
+            <div class="pop-up">
+                <span class="pop-up__close">
+                    <img src="./img/close.png" alt="">
+                </span>
+                <div class="pop-up-wrapper flex flex-v-center">
+                    <h2 class="pop_up-title title ">
+                        Наши контакты
+                    </h2>
+                    <div class="title-icon">
+                        <img src="./img/messege-icon.png" alt="">
+                    </div>
+                </div>
+                <div class="pop-up__link-inner-row flex">
+                    <div class="pop-up__link-inner">
+                        <a href="#" class="pop-up__link flex flex-v-center">
+                            <div class="title-icon">
+                                <img src="./img/vk.png" alt="">
+                            </div>
+                            <div class="pop-up__link-name">
+                                ВКонтакте
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pop-up__link-inner">
+                        <a href="#" class="pop-up__link pop-up__link-telegram flex flex-v-center">
+                            <div class="title-icon">
+                                <img src="./img/telegram.png" alt="">
+                            </div>
+                            <div class="pop-up__link-name">
+                                Телеграмм
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pop-up__link-inner">
+                        <a href="#" class="pop-up__link pop-up__link-twitter flex flex-v-center">
+                            <div class="title-icon">
+                                <img src="./img/twitter.png" alt="">
+                            </div>
+                            <div class="pop-up__link-name">
+                                Твиттер
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <footer class="footer footer-server">
+            <div class="footer-container _container">
+                <div class="footer-wrapper flex">
+                    <div class="footer-info">
+                        <a href="#about" class="logo footer-logo">
+                            ONE-vps
+                        </a>
+                        <div class="footer-copy">
+                            © 2020 – 2021, Onehost.ru
+                        </div>
+                        <div class="footer-contact">
+                            По всем вопросам
+                            <a href="mailto:onehost824@mail.ru">
+                                onehost824@mail.ru
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="footer-menu flex flex-wrap">
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Документация
+                            </a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Wiki
+                            </a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                О нас
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

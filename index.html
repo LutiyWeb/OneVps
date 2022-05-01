@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ONE-VPS</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <svg display="none">
+    <symbol viewBox="0 0 20 20" id="userIcon">
+      <path
+        d="M10.0001 20C8.48816 20.0043 6.99532 19.6622 5.6361 19C5.13865 18.758 4.66203 18.4754 4.2111 18.155L4.0741 18.055C2.83392 17.1396 1.81997 15.9522 1.1101 14.584C0.375836 13.1679 -0.00499271 11.5952 4.94229e-05 10C4.94229e-05 4.47715 4.47725 0 10.0001 0C15.5229 0 20.0001 4.47715 20.0001 10C20.0051 11.5944 19.6247 13.1664 18.8911 14.582C18.1822 15.9494 17.1697 17.1364 15.9311 18.052C15.4639 18.394 14.968 18.6951 14.4491 18.952L14.3691 18.992C13.009 19.6577 11.5144 20.0026 10.0001 20ZM10.0001 15C8.50158 14.9971 7.12776 15.834 6.4431 17.167C8.68449 18.2772 11.3157 18.2772 13.5571 17.167V17.162C12.8716 15.8305 11.4977 14.9954 10.0001 15ZM10.0001 13C12.1662 13.0028 14.1635 14.1701 15.2291 16.056L15.2441 16.043L15.2581 16.031L15.2411 16.046L15.2311 16.054C17.7601 13.8691 18.6644 10.3423 17.4987 7.21011C16.3331 4.07788 13.3432 2.00032 10.0011 2.00032C6.65901 2.00032 3.66909 4.07788 2.50345 7.21011C1.33781 10.3423 2.2421 13.8691 4.7711 16.054C5.83736 14.169 7.83446 13.0026 10.0001 13ZM10.0001 12C7.79096 12 6.0001 10.2091 6.0001 8C6.0001 5.79086 7.79096 4 10.0001 4C12.2092 4 14.0001 5.79086 14.0001 8C14.0001 9.06087 13.5787 10.0783 12.8285 10.8284C12.0784 11.5786 11.061 12 10.0001 12ZM10.0001 6C8.89553 6 8.0001 6.89543 8.0001 8C8.0001 9.10457 8.89553 10 10.0001 10C11.1047 10 12.0001 9.10457 12.0001 8C12.0001 6.89543 11.1047 6 10.0001 6Z" />
+    </symbol>
+    <symbol viewBox="0 0 24 12" id="btnArrow">
+      <path
+        d="M19.404 7.20003L16.308 10.308L18 12L24 6.00003L18 3.05176e-05L16.308 1.69203L19.404 4.80003H0V7.20003H19.404Z" />
+    </symbol>
+    <symbol viewBox="0 0 25 22" id="heartIcon">
+      <path
+        d="M9.93335e-08 6.60079C-0.000310542 4.82907 0.727981 3.13163 2.02102 1.89038C3.31405 0.649132 5.06323 -0.0316765 6.875 0.00113322C9.02165 -0.0100129 11.07 0.880079 12.5 2.44545C13.93 0.880079 15.9783 -0.0100129 18.125 0.00113322C19.9368 -0.0316765 21.6859 0.649132 22.979 1.89038C24.272 3.13163 25.0003 4.82907 25 6.60079C25 13.1467 17.0263 18.0891 12.5 22C7.98375 18.0561 9.93335e-08 13.1516 9.93335e-08 6.60079Z" />
+    </symbol>
+  </svg>
+  <div class="page">
+    <main class="main" id="main">
+      <div class="main__container _container">
+        <div class="header flex flex-h-star flex-v-center ">
+          <a href="./index.html" class="logo header__logo">
+            ONE-vps
+          </a>
+          <ul class="menu header__menu 
+                                        flex flex-wrap">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                Главная
+              </a>
+            </li>
+            <li class="menu__item menu__item--services">
+              <a href="#" class="menu__link">
+                Наши услуги
+              </a>
+              <ul class="services-list">
+                <li class="services-item">
+                  <a href="./virtual-servers.html" class="services-link">
+                    Виртуальные сервера
+                  </a>
+                </li>
+                <li class="services-item">
+                  <a href="./dedicated-servers.html" class="services-link">
+                    Выделенные сервера
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a href="./about.html" class="menu__link">
+                О нас
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                Статус сервисов
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                База знаний
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="user-btn basicBtn">
+            <svg class="userIcon">
+              <use xlink:href="#userIcon">
+              </use>
+            </svg>
+            <span>Личный кабинет</span>
+          </a>
+
+          <div class="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
+        </div>
+        <div class="main__content-inner flex flex-h-between   flex-v-center">
+          <div class="new-design flex">
+            <div class="iconInner iconInner--blue">
+              <svg class="heartIcon--white heartIcon">
+                <use xlink:href="#heartIcon">
+                </use>
+              </svg>
+            </div>
+
+            <span class="new-design__text">
+              Новый дизайне на сайте
+            </span>
+          </div>
+          <div class="main__content-offer">
+            <h1 class="main__content-title">
+              Наше железо стоит в лучших Дата-Центрах!
+            </h1>
+            <p class="main__content-subtitle">
+              Благодаря этому, наши клиенты получют - лучший пинг и высокий FPS.
+            </p>
+
+            <div class="main__btn-inner flex">
+              <a href="./virtual-servers.html" class="order__btn basicBtn">
+                <span>Заказать сервер</span>
+                <svg class="btnArrow">
+                  <use xlink:href="#btnArrow">
+                  </use>
+                </svg>
+              </a>
+
+              <a href="#" class="details__btn basicBtn">
+                Подробнее
+              </a>
+            </div>
+          </div>
+          <div class="main__content-img">
+            <div class="main__image-info-inner">
+              <div class="main__image-info-text">
+                <p class="info-text__title">
+                  Производительное железо
+                </p>
+                <p class="info-text__subtitle">
+                  Мы используем лучшее оборудование и комплектующие, чтобы гарантировать стабильную работу uptime не
+                  менее
+                  99,92%
+                </p>
+              </div>
+              <div class="main__image-info-text">
+                <p class="info-text__title">
+                  Производительное железо
+                </p>
+                <p class="info-text__subtitle">
+                  Мы используем лучшее оборудование и комплектующие, чтобы гарантировать стабильную работу uptime не
+                  менее
+                  99,92%
+                </p>
+              </div>
+            </div>
+            <div class="main__image-info-img">
+              <img src="./img/main-img.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="advantage">
+      <div class="_container advantage__container">
+        <div class="advantage__content flex">
+          <div class="advantage__item-wrapper">
+            <div class="advantage__item">
+              <div class="iconInner iconInner--yellow">
+                <img src="./img/support-icon.svg" alt="">
+              </div>
+              <p class="advantage__item-title">
+                Служба поддержки
+              </p>
+              <p class="advantage__item-text">
+                Каждому клиенту предоставляется качественная техническая поддержка, которую можно получить 24 часа в
+                сутки,
+                7 дней в
+                неделю.
+              </p>
+            </div>
+          </div>
+          <div class="advantage__item-wrapper">
+            <div class="advantage__item">
+              <div class="iconInner iconInner--yellow">
+                <img src="./img/rocket-icon.svg" alt="">
+              </div>
+              <p class="advantage__item-title">
+                Служба поддержки
+              </p>
+              <p class="advantage__item-text">
+                Каждому клиенту предоставляется качественная техническая поддержка, которую можно получить 24 часа в
+                сутки,
+                7 дней в
+                неделю.
+              </p>
+            </div>
+          </div>
+          <div class="advantage__item-wrapper">
+            <div class="advantage__item">
+              <div class="iconInner iconInner--yellow">
+                <svg class="heartIcon--blue heartIcon">
+                  <use xlink:href="#heartIcon">
+                  </use>
+                </svg>
+              </div>
+              <p class="advantage__item-title">
+                Служба поддержки
+              </p>
+              <p class="advantage__item-text">
+                Каждому клиенту предоставляется качественная техническая поддержка, которую можно получить 24 часа в
+                сутки,
+                7 дней в
+                неделю.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="vector-list">
+        <img src="./img/vector-bg/vector_1.png" class="vector-1" alt="">
+        <img src="./img/vector-bg/vector_2.png" class="vector-2" alt="">
+        <img src="./img/vector-bg/vector_3.png" class="vector-3" alt="">
+      </div>
+
+    </section>
+
+    <section class="product">
+      <div class="vector-list">
+        <img src="./img/vector-bg/vector_4.png" class="vector-4" alt="">
+        <img src="./img/vector-bg/vector_5.png" class="vector-5" alt="">
+        <img src="./img/vector-bg/vector_6.png" class="vector-6" alt="">
+      </div>
+      <div class="product__container _container">
+        <div class="tabs">
+          <div class="title-wrapper product-title__wrapper flex">
+            <h2 class="product-title title ">
+              Выбери свой продукт
+            </h2>
+            <div class="title-icon">
+              <img src="./img/smile-icon.png" alt="">
+            </div>
+          </div>
+
+          <div class="nav-tabs">
+            <a href="#" data-tab="1" class="tab-btn active basicBtn">Цена на месяц</a>
+            <a href="#" data-tab="2" class="tab-btn basicBtn">Цена на год</a>
+          </div>
+          <div class="tab-content">
+            <div data-tab-content="1" class="tab-pane active">
+              <div class="small-product__inner product__inner">
+                <div class="product-card">
+                  <div class="iconInner iconInner--green">
+                    <svg class="heartIcon--green heartIcon">
+                      <use xlink:href="#heartIcon">
+                      </use>
+                    </svg>
+                  </div>
+                  <div class="product-card__name">VDS-VM-1</div>
+                  <div class="product-card__desc">для небольших проектов</div>
+                  <div class="product-card__price">
+                    <span>от</span>9 000₽
+                  </div>
+                  <a href="#" class="product-card__btn basicBtn">
+                    <span>Заказать сервер</span>
+                    <svg class="btnArrow iconNull">
+                      <use xlink:href="#btnArrow">
+                      </use>
+                    </svg>
+                  </a>
+
+                </div>
+                <div class="product-info flex flex-wrap">
+                  <div class="product-select__box select-box select-box__proccesor">
+                    <p class="select-name">Процессор</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__memory">
+                    <p class="select-name">Оперативная память</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__hd">
+                    <p class="select-name">SSD-диск</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__defence">
+                    <p class="select-name">Защита DDOS</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+
+                  <div class="product-select__box select-box select-box__speed">
+                    <p class="select-name">Скорость</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__data">
+                    <p class="select-name">Дата центр</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="large-product__inner product__inner">
+                <div class="product-card">
+                  <div class="iconInner iconInner--pink">
+                    <svg class="heartIcon--pink heartIcon">
+                      <use xlink:href="#heartIcon">
+                      </use>
+                    </svg>
+                  </div>
+                  <div class="product-card__name">Dedicated server</div>
+                  <div class="product-card__desc">для крупных проектов</div>
+                  <div class="product-card__price">
+                    <span>от</span>51 600₽
+                  </div>
+                  <a href="#" class="product-card__btn basicBtn">
+                    <span>Заказать сервер</span>
+                    <svg class="btnArrow iconNull">
+                      <use xlink:href="#btnArrow">
+                      </use>
+                    </svg>
+                  </a>
+
+                </div>
+                <div class="product-info flex flex-wrap">
+                  <div class="product-select__box select-box select-box__proccesor">
+                    <p class="select-name">Процессор</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__memory">
+                    <p class="select-name">Оперативная память</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__hd">
+                    <p class="select-name">SSD-диск</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__defence">
+                    <p class="select-name">Защита DDOS</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+
+                  <div class="product-select__box select-box select-box__speed">
+                    <p class="select-name">Скорость</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__data">
+                    <p class="select-name">Дата центр</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-tab-content="2" class="tab-pane">
+              <div class="small-product__inner product__inner">
+                <div class="product-card">
+                  <div class="iconInner iconInner--green">
+                    <svg class="heartIcon--green heartIcon">
+                      <use xlink:href="#heartIcon">
+                      </use>
+                    </svg>
+                  </div>
+                  <div class="product-card__name">VDS-VM-1</div>
+                  <div class="product-card__desc">для небольших проектов</div>
+                  <div class="product-card__price">
+                    <span>от</span>9 000₽
+                  </div>
+                  <a href="#" class="product-card__btn basicBtn">
+                    <span>Заказать сервер</span>
+                    <svg class="btnArrow iconNull">
+                      <use xlink:href="#btnArrow">
+                      </use>
+                    </svg>
+                  </a>
+
+                </div>
+                <div class="product-info flex flex-wrap">
+                  <div class="product-select__box select-box select-box__proccesor">
+                    <p class="select-name">Процессор</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__memory">
+                    <p class="select-name">Оперативная память</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__hd">
+                    <p class="select-name">SSD-диск</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__defence">
+                    <p class="select-name">Защита DDOS</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+
+                  <div class="product-select__box select-box select-box__speed">
+                    <p class="select-name">Скорость</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__data">
+                    <p class="select-name">Дата центр</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="large-product__inner product__inner">
+                <div class="product-card">
+                  <div class="iconInner iconInner--pink">
+                    <svg class="heartIcon--pink heartIcon">
+                      <use xlink:href="#heartIcon">
+                      </use>
+                    </svg>
+                  </div>
+                  <div class="product-card__name">Dedicated server</div>
+                  <div class="product-card__desc">для крупных проектов</div>
+                  <div class="product-card__price">
+                    <span>от</span>51 600₽
+                  </div>
+                  <a href="#" class="product-card__btn basicBtn">
+                    <span>Заказать сервер</span>
+                    <svg class="btnArrow iconNull">
+                      <use xlink:href="#btnArrow">
+                      </use>
+                    </svg>
+                  </a>
+
+                </div>
+                <div class="product-info flex flex-wrap">
+                  <div class="product-select__box select-box select-box__proccesor">
+                    <p class="select-name">Процессор</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__memory">
+                    <p class="select-name">Оперативная память</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__hd">
+                    <p class="select-name">SSD-диск</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__defence">
+                    <p class="select-name">Защита DDOS</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+
+                  <div class="product-select__box select-box select-box__speed">
+                    <p class="select-name">Скорость</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                  <div class="product-select__box select-box select-box__data">
+                    <p class="select-name">Дата центр</p>
+                    <select name="sources" id="sources" class="custom-select sources"
+                      placeholder="1 ядро Intel Core i7-6700 4.2 GHz">
+                      <option value="profile">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="word">4 ядро Intel Core i7-6700 4.2 GHz</option>
+                      <option value="hashtag">1 ядро Intel Core i7-6700 4.2 GHz</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="more-btn">
+          Показать еще услуги
+        </a>
+      </div>
+
+      <!-- <div class="vector-list">
+        <img src="./img/vector-bg/vector_4.png" class="vector-4" alt="">
+      </div> -->
+    </section>
+
+    <section class="system">
+      <div class="vector-list">
+        <img src="./img/vector-bg/vector_7.png" class="vector-7" alt="">
+        <img src="./img/vector-bg/vector_8.png" class="vector-8" alt="">
+        <img src="./img/vector-bg/vector_9.png" class="vector-9" alt="">
+        <img src="./img/vector-bg/vector_10.png" class="vector-10" alt="">
+      </div>
+      <div class="system-container _container">
+        <div class="title-wrapper system-title__wrapper  flex">
+          <h2 class="title ">
+            Доступные операционные системы
+          </h2>
+          <div class="title-icon">
+            <img src="./img/comp-icon.png" alt="">
+          </div>
+        </div>
+        <div class="system-list flex flex-wrap">
+          <div class="system-item__box">
+            <div class="system-item flex flex-v-center">
+              <div class="system-item__img _resp-img">
+                <img src="./img/system-img1.png" alt="">
+              </div>
+              <div class="system-item__info">
+                <span>Ubuntu 16.04</span>
+                <span>Ubuntu 16.04</span>
+                <span>Ubuntu 16.04</span>
+              </div>
+            </div>
+          </div>
+          <div class="system-item__box">
+            <div class="system-item flex flex-v-center">
+              <div class="system-item__img ">
+                <img src="./img/system-img2.png" alt="">
+              </div>
+              <div class="system-item__info">
+                <span>Debian 8</span>
+                <span>Debian 8</span>
+                <span>Debian 8</span>
+              </div>
+            </div>
+          </div>
+          <div class="system-item__box">
+            <div class="system-item flex flex-v-center">
+              <div class="system-item__img">
+                <img src="./img/system-img3.png" alt="">
+              </div>
+              <div class="system-item__info">
+                <span>CentOS 6</span>
+                <span>CentOS 6</span>
+                <span>CentOS 6</span>
+              </div>
+            </div>
+          </div>
+          <div class="system-item__box">
+            <div class="system-item flex flex-v-center">
+              <div class="system-item__img system-item__img-blue">
+                <img src="./img/system-img4.png" alt="">
+              </div>
+              <div class="system-item__info">
+                <span>Windows 2012</span>
+                <span>Windows 2012</span>
+                <span>Windows 2012</span>
+              </div>
+            </div>
+          </div>
+          <div class="system-item__box">
+            <div class="system-item flex flex-v-center">
+              <div class="system-item__img system-item__img-blue">
+                <img src="./img/system-img4.png" alt="">
+              </div>
+              <div class="system-item__info">
+                <span>Windows 2010</span>
+                <span>Windows 2010</span>
+                <span>Windows 2010</span>
+              </div>
+            </div>
+          </div>
+          <div class="system-item__box">
+            <div class="system-item flex flex-v-center">
+              <div class="system-item__img">
+                <img src="./img/system-img5.png" alt="">
+              </div>
+              <div class="system-item__info">
+                <span>Любой образ</span>
+                <span>Любой образ</span>
+                <span>Любой образ</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="question">
+      <div class="vector-list">
+        <img src="./img/vector-bg/vector_11.png" class="vector-11" alt="">
+        <img src="./img/vector-bg/vector_12.png" class="vector-12" alt="">
+      </div>
+      <div class="question-container _container">
+        <div class="title-wrapper question-title__wrapper flex flex-h-center">
+          <h2 class="title  question-title">
+            Вопрос-ответ
+          </h2>
+          <div class="title-icon">
+            <img src="./img/sly-icon.png" alt="">
+          </div>
+        </div>
+        <div class="question-inner flex flex-wrap">
+          <div class="question-item__inner">
+            <div class="question-item">
+              <div class="iconInner iconInner--green">
+                <svg class="heartIcon--white heartIcon">
+                  <use xlink:href="#heartIcon">
+                  </use>
+                </svg>
+              </div>
+              <p class="question-item-value">
+                Чтобы подключиться через SSH к серверу вам необходимо скачать и установить клиент Putty или BitVise
+                Client
+                (на выбор)
+              </p>
+              <p class="answer-item-value">
+                После скачивания - ознакомьтесь с документацией к клиенту и подключитесь к сервер по данным которые
+                получили в
+                активацион-
+                ном письме после заказа и оплаты сервера.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="question-item__inner">
+            <div class="question-item question-item__white">
+              <div class="iconInner iconInner--pink">
+                <svg class="heartIcon--pink heartIcon">
+                  <use xlink:href="#heartIcon">
+                  </use>
+                </svg>
+              </div>
+              <p class="question-item-value">
+                Чтобы подключиться через SSH к серверу вам необходимо скачать и установить клиент Putty или BitVise
+                Client
+                (на выбор)
+              </p>
+              <p class="answer-item-value">
+                После скачивания - ознакомьтесь с документацией к клиенту и подключитесь к сервер по данным которые
+                получили в
+                активацион-
+                ном письме после заказа и оплаты сервера.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="question-item__inner">
+            <div class="question-item flex flex-wrap">
+              <div class="iconInner iconInner--blue">
+                <svg class="heartIcon--white heartIcon">
+                  <use xlink:href="#heartIcon">
+                  </use>
+                </svg>
+              </div>
+              <p class="question-item-value">
+                Burst – технология позволяющая расширить ваш канал сервера.
+              </p>
+              <p class="answer-item-value">
+                Гарантированно вы получаете столько, сколько указано в тарифе. Например: 250 Mbps (burst до 1 Gbps) -
+                это значит, что вы
+                получите гарантирова-нно 250 Mbps, а если другие пользователи не будут создавать нагрузку на сеть - вы
+                получите канал
+                вплоть до 1 Gbps.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container _container">
+        <div class="footer-wrapper flex">
+          <div class="footer-info">
+            <a href="#main" class="logo footer-logo">
+              ONE-vps
+            </a>
+            <div class="footer-copy">
+              © 2020 – 2021, Onehost.ru
+            </div>
+            <div class="footer-contact">
+              По всем вопросам
+              <a href="mailto:onehost824@mail.ru">
+                onehost824@mail.ru
+              </a>
+            </div>
+          </div>
+          <ul class="footer-menu flex flex-wrap">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link">
+                Документация
+              </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link">
+                Wiki
+              </a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="./about.html" class="footer-menu__link">
+                О нас
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
